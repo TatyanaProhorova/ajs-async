@@ -4,7 +4,7 @@ import json from "./parser.js";
 export default class GameSavingLoader {
   load() {
     return new Promise((resolve, reject) => {resolve(read().then(json))
-      },);
+      });
     }
   }
 

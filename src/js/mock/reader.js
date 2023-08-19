@@ -4,7 +4,8 @@ export default function read() {
       // эмуляция чтения файла
       setTimeout(() => {
         const data = 
-        '{"id":9,"created":1546300800,"userInfo":{"id":1,"name":"Hitman","level":10,"points":2000}}';
+        //"created":
+        '{"id":9,1546300800,"userInfo":{"id":1,"name":"Hitman","level":10,"points":2000}}';
         return (input => {
           const buffer = new ArrayBuffer(input.length * 2);
           const bufferView = new Uint16Array(buffer);
