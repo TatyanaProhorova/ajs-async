@@ -1,18 +1,16 @@
-// Спецификации объекта типа GameSaving:
 export default class GameSaving {
-  "id" = null;
-  "created" = null;
-  "userInfo.id" = null;;
-  "userInfo.name" = null;
-  "userInfo.level" = null;
-  "userInfo.points" = null; 
-
-
-  "created" = 1546300888; // timestamp создания
-  "userInfo" = {
-    "id": null, // user id
-    "name": null, // user name
-    "level": null, // user level
-    "points": null, // user points
+  constructor(id, created, userInfo = {
+    id: 0, name: 'null', level: 0, points: 0,
+  }) {
+    this.id = id;
+    this.created = created;
+    this.userInfo = userInfo; // timestamp создания
+    // userInfo = {
+    //   id: 0, // user id
+    //   name: 'null', // user name
+    //   level: 0, // user level
+    //   points: 0, // user points
   }
 }
+
+// как соэдать объект с вложенностью?
