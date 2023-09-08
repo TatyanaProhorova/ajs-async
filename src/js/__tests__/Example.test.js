@@ -1,8 +1,7 @@
 import GameSavingLoader from '../class/example';
 
-jest.setTimeout(6000);
 
-test('запуск Promise', async (done) => {
+test('запуск Promise', async () => {
   const expected = {
     id: 9,
     created: 1546300800,
@@ -12,8 +11,7 @@ test('запуск Promise', async (done) => {
   };
   const data = await GameSavingLoader.load();
   expect(data).toEqual(expected);
-  done();
-  // expect(GameSavingLoader.load()).toBe({})
+  // done();
 });
 
 // test('etsting error', async () => {

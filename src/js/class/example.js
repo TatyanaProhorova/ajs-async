@@ -1,17 +1,14 @@
-import read from '../mock/reader';
-import json from '../mock/parser';
-import GameSaving from './GameSaving';
+import read from '../mock/reader.js';
+import json from '../mock/parser.js';
+import GameSaving from './GameSaving.js';
 
 export default class GameSavingLoader {
-  static load() {
-    return new Promise((resolve) => {
-      resolve(read()
-        .then(json)
-        .then((result) => {
-          let gameSaving = new GameSaving();
-          gameSaving = { ...JSON.parse(result) };
-          return gameSaving;
-        }));
-    });
+  static async load() {
+    const r = await read();
+    const j = await json(r);
+    // throw new Error('TEXT');
+    const testObject = new GameSaving(...Object.values(JSON.parse(j)));
+    //console.log(testObject);
+    return testObject;
   }
 }
